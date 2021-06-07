@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2021 at 11:58 AM
+-- Generation Time: Jun 07, 2021 at 02:46 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -55,16 +55,15 @@ CREATE TABLE `berobat` (
   `id_petugas` int(11) NOT NULL,
   `tgl_berobat` date NOT NULL,
   `tindakan` text NOT NULL,
-  `diagnosa` varchar(100) NOT NULL,
-  `penatalaksaan` enum('Rawat Jalan','Rawat Inap','Rujuk','Lainnya') NOT NULL
+  `diagnosa` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `berobat`
 --
 
-INSERT INTO `berobat` (`id_berobat`, `id_bayi`, `id_petugas`, `tgl_berobat`, `tindakan`, `diagnosa`, `penatalaksaan`) VALUES
-(4, 2, 1, '2022-05-21', 'Imunisasi Jilid 1', 'Suntik', '');
+INSERT INTO `berobat` (`id_berobat`, `id_bayi`, `id_petugas`, `tgl_berobat`, `tindakan`, `diagnosa`) VALUES
+(4, 2, 1, '2022-05-21', 'Imunisasi Jilid 1', 'Suntik');
 
 -- --------------------------------------------------------
 
@@ -82,10 +81,11 @@ CREATE TABLE `imunisasi` (
 --
 
 INSERT INTO `imunisasi` (`id_imunisasi`, `nama_imunisasi`) VALUES
-(1, 'Ibuprofen'),
-(2, 'Pamol'),
-(4, 'Paracetine Syrup'),
-(5, 'Sanmol');
+(1, 'Hepatitis B'),
+(2, 'Polio'),
+(4, 'BCG'),
+(8, 'Campak'),
+(9, 'DPT-HB-HiB');
 
 -- --------------------------------------------------------
 
@@ -117,6 +117,13 @@ CREATE TABLE `resep_imunisasi` (
   `id_berobat` int(11) NOT NULL,
   `id_imunisasi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `resep_imunisasi`
+--
+
+INSERT INTO `resep_imunisasi` (`id_resep`, `id_berobat`, `id_imunisasi`) VALUES
+(7, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -202,7 +209,7 @@ ALTER TABLE `berobat`
 -- AUTO_INCREMENT for table `imunisasi`
 --
 ALTER TABLE `imunisasi`
-  MODIFY `id_imunisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_imunisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `petugas`
@@ -214,7 +221,7 @@ ALTER TABLE `petugas`
 -- AUTO_INCREMENT for table `resep_imunisasi`
 --
 ALTER TABLE `resep_imunisasi`
-  MODIFY `id_resep` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_resep` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
