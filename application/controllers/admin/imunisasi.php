@@ -24,7 +24,7 @@ class imunisasi extends CI_Controller {
 				'nama_imunisasi' => html_escape($this->input->post('nama', true))
 			];
 			$this->imunisasi_m->tambahDataimunisasi($data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> imunisasi Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Imunisasi Berhasil Ditambahkan.</div>');
 			redirect('admin/imunisasi');
 		}
 	}
@@ -46,7 +46,7 @@ class imunisasi extends CI_Controller {
 				'nama_imunisasi' => $this->input->post('nama', true)
 			];
 			$this->imunisasi_m->ubahDataimunisasi($data, $id);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> imunisasi Berhasil Diubah.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Imunisasi Berhasil Diubah.</div>');
 			redirect('admin/imunisasi');
 		}
 	}
@@ -54,7 +54,7 @@ class imunisasi extends CI_Controller {
 	public function hapus($id)
 	{
 		$this->db->delete('imunisasi', ['id_imunisasi' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> imunisasi Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Imunisasi Berhasil Dihapus.</div>');
 		redirect('admin/imunisasi');
 	}
 
