@@ -39,7 +39,7 @@
                 <tr>
                   <th>No</th>
                   <th>Tgl berobat</th>
-                  <th>tindakan</th>
+                  <th>Tindakan</th>
                   <th>Diagnosa</th>
                 </tr>
               </thead>
@@ -65,7 +65,7 @@
           <?= form_open('admin/kunjungan/tambahtindakan'); ?>
           <input type="hidden" name="id_berobat" required value="<?= $d['id_berobat']; ?>">
           <div class="form-group">
-            <label for="tindakan">tindakan</label>
+            <label for="tindakan">Tindakan</label>
             <textarea name="tindakan" required id="tindakan" class="form-control"><?= $d['tindakan']; ?></textarea>
             <small class="muted text-danger"><?= form_error('tindakan'); ?></small>
           </div>

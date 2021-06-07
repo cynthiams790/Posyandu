@@ -31,7 +31,7 @@ class petugas extends CI_Controller {
 
 	public function ubah($id)
 	{
-		$data['title'] = 'Ubah Data petugas';
+		$data['title'] = 'Ubah Data Petugas';
 		$where = ['id_petugas' => $id];
 		$data['petugas'] = $this->petugas_m->get_where('petugas', $where)->row_array();
 		$this->form_validation->set_rules('nama', 'Nama petugas', 'required|trim');

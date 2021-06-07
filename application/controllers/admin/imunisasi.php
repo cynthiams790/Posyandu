@@ -11,7 +11,7 @@ class imunisasi extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Data imunisasi';
+		$data['title'] = 'Data Imunisasi';
 		$data['imunisasi'] = $this->imunisasi_m->get('imunisasi')->result_array();
 		$this->form_validation->set_rules('nama', 'Nama imunisasi', 'required|trim');
 		if($this->form_validation->run() == FALSE) {
@@ -31,7 +31,7 @@ class imunisasi extends CI_Controller {
 
 	public function ubah($id)
 	{
-		$data['title'] = 'Ubah Data imunisasi';
+		$data['title'] = 'Ubah Data Imunisasi';
 		$where = ['id_imunisasi' => $id];
 		$data['imunisasi'] = $this->imunisasi_m->get_where('imunisasi', $where)->row_array();
 		$this->form_validation->set_rules('nama', 'Nama petugas', 'required|trim');

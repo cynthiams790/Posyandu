@@ -35,7 +35,7 @@ class bayi extends CI_Controller {
 
 	public function ubah($id)
 	{
-		$data['title'] = 'Ubah Data bayi';
+		$data['title'] = 'Ubah Data Bayi';
 		$where = ['id_bayi' => $id];
 		$data['bayi'] = $this->bayi_m->get_where('bayi', $where)->row_array();
 		$this->form_validation->set_rules('nama', 'Nama bayi', 'required|trim');

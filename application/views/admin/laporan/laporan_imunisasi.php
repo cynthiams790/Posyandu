@@ -1,6 +1,8 @@
 <div class="container-fluid">
-	<h4 class="text-center">Posyandu Flamboyan</h4>
+	<h4 class="text-center">Laporan Data Imunisasi</h4>
 	<small class="text-center">Jl.Krakatau, Jakarta</small>
+  	<center><img src="<?php echo base_url(); ?>assets/img/flamboyans.jpg" class="img-fluid rounded" width="300px"><br>
+ 	 <br><br>
 	<div class="row">
 		<div class="col-md">
 			<table class="table text-center">
