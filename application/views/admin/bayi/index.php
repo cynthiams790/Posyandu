@@ -7,7 +7,7 @@
   <div class="row mb-2">
     <div class="col-md-6">
       <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#formModalbayi">
-        <i class="fas fa-plus"></i> Tambah Data Bayi
+        <i class="fas fa-plus"></i> Tambah Data Balita
       </button>
       <a href="<?= base_url('laporan/bayi'); ?>" target="_blank" class="btn btn-secondary mb-2"><i class="fas fa-print"></i></a>
       <?php if(validation_errors()) : ?>

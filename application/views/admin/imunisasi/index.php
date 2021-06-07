@@ -7,7 +7,7 @@
   <div class="row mb-2">
     <div class="col-md-6">
       <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#formModalimunisasi">
-        <i class="fas fa-plus"></i> Tambah Data imunisasi
+        <i class="fas fa-plus"></i> Tambah Data Imunisasi
       </button>
       <a href="<?= base_url('laporan/imunisasi'); ?>" target="_blank" class="btn btn-secondary mb-2"><i class="fas fa-print"></i></a>
       <?php if(validation_errors()) : ?>
