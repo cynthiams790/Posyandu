@@ -6,7 +6,7 @@
 			<table class="table text-center">
 				<tr>
 					<th>No</th>
-					<th>Nama imunisasi</th>
+					<th>Nama Imunisasi</th>
 				</tr>
 				<?php $no = 1; foreach($imunisasi as $d) : ?>
 					<tr>

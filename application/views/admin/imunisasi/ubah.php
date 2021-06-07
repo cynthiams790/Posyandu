@@ -9,7 +9,7 @@
           <?= form_open('admin/imunisasi/ubah/'. $imunisasi['id_imunisasi']); ?>
           <input type="hidden" name="id_imunisasi" class="form-control" value="<?= $imunisasi['id_imunisasi']; ?>">
           <div class="form-group">
-            <label for="nama">Nama imunisasi</label>
+            <label for="nama">Nama Imunisasi</label>
             <input type="text" name="nama" id="nama" class="form-control" value="<?= $imunisasi['nama_imunisasi']; ?>">
             <small class="muted text-danger"><?= form_error('nama'); ?></small>
           </div>

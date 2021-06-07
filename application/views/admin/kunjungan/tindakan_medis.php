@@ -84,16 +84,16 @@
         </div>
       </div>
       <div class="card mt-4">
-        <div class="card-header bg-dark text-white font-weight-bold text-center">Resep imunisasi</div>
+        <div class="card-header bg-dark text-white font-weight-bold text-center">Resep Imunisasi</div>
         <div class="card-body">
           <?= form_open('admin/kunjungan/tambahResep'); ?>
           <input type="hidden" name="id_berobat" value="<?= $d['id_berobat']; ?>">
           <div class="row">
             <div class="col-md-10">
               <div class="form-group">
-                <label for="imunisasi">imunisasi</label>
+                <label for="imunisasi">Imunisasi</label>
                 <select name="imunisasi" required id="imunisasi" class="form-control">
-                  <option value="">-- Pilih imunisasi --</option>
+                  <option value="">-- Pilih Imunisasi --</option>
                   <?php foreach($imunisasi as $o) : ?>
                      <option value="<?= $o['id_imunisasi']; ?>"><?= $o['nama_imunisasi']; ?></option>
                   <?php endforeach; ?>
@@ -111,7 +111,7 @@
             <table class="table">
               <tr>
                 <th>No</th>
-                <th>Nama imunisasi</th>
+                <th>Nama Imunisasi</th>
                 <th><i class="fas fa-cogs"></i></th>
               </tr>
               <?php $no = 1; foreach($resep as $r) : ?>

@@ -53,7 +53,7 @@
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'imunisasi' ? ' active' : '' ?>" href="<?= base_url('admin/imunisasi'); ?>">
               <i class="fas fa-pills"></i>
-              Data imunisasi
+              Data Imunisasi
             </a>
           </li>
         </ul>
@@ -79,7 +79,7 @@
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('laporan/imunisasi'); ?>">
               <i class="fas fa-notes-medical"></i>
-              Laporan imunisasi
+              Laporan Imunisasi
             </a>
           </li>
           <li class="nav-item">

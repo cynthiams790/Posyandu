@@ -25,8 +25,8 @@
               <thead>
                 <tr>
                   <td>No</td>
-                  <td>ID imunisasi</td>
-                  <td>Nama imunisasi</td>
+                  <td>ID Imunisasi</td>
+                  <td>Nama Imunisasi</td>
                   <td>Aksi</td>
                 </tr>
               </thead>
@@ -38,7 +38,7 @@
                     <td><?= $u['nama_imunisasi']; ?></td>
                     <td>
                       <a href="<?= base_url('admin/imunisasi/ubah/') . $u['id_imunisasi']; ?>" class="btn btn-info"><i class="fas fa-edit"></i></a>
-                      <a href="<?= base_url('admin/imunisasi/hapus/') . $u['id_imunisasi']; ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus ?')"><i class="fas fa-trash"></i></a>
+                      <a href="<?= base_url('admin/imunisager" onclick="return confirm('Yakin si/hapus/') . $u['id_imunisasi']; ?>" class="btn btn-danHapus ?')"><i class="fas fa-trash"></i></a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
