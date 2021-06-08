@@ -14,7 +14,7 @@ class Kunjungan extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Data Kunjungan';
+		$data['title'] = 'Data Transaksi';
 		$data['kunjungan'] = $this->Kunjungan_m->get_join('berobat')->result_array();
 		$data['petugas'] = $this->petugas_m->get('petugas')->result_array();
 		$data['bayi'] = $this->bayi_m->get('bayi')->result_array();
@@ -36,14 +36,14 @@ class Kunjungan extends CI_Controller {
 				'tgl_berobat' => html_escape($this->input->post('tgl', true))
 			];
 			$this->Kunjungan_m->tambahDataKunjungan($data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Kunjungan Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Transaksi Berhasil Ditambahkan.</div>');
 			redirect('admin/kunjungan');
 		}
 	}
 
 	public function ubah($id)
 	{
-		$data['title'] = 'Ubah Data Kunjungan berobat';
+		$data['title'] = 'Ubah Data Transaksi';
 		$where = ['id_berobat' => $id];
 		$data['kunjungan'] = $this->Kunjungan_m->get_where('berobat', $where)->row_array();
 		$this->form_validation->set_rules('bayi', 'Nama bayi', 'required|trim');
@@ -64,7 +64,7 @@ class Kunjungan extends CI_Controller {
 				'tgl_berobat' => html_escape($this->input->post('tgl', true))
 			];
 			$this->Kunjungan_m->ubahDataKunjungan($data, $id);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Kunjungan Berhasil Diubah.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Transaksi Berhasil Diubah.</div>');
 			redirect('admin/kunjungan');
 		}
 	}
@@ -72,7 +72,7 @@ class Kunjungan extends CI_Controller {
 	public function hapus($id)
 	{
 		$this->db->delete('berobat', ['id_berobat' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Kunjungan Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Transaksi Berhasil Dihapus.</div>');
 		redirect('admin/kunjungan');
 	}
 
@@ -147,7 +147,7 @@ class Kunjungan extends CI_Controller {
 
 	public function laporan()
 	{
-		$data['title'] = 'Laporan Kunjungan/berobat';
+		$data['title'] = 'Laporan Transaksi';
 		$data['kunjungan'] = $this->Kunjungan_m->get_join('berobat')->result_array();
 		$this->load->view('layout/header', $data);
 		$this->load->view('admin/laporan/laporan_kunjungan');

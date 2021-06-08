@@ -59,7 +59,7 @@
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'kunjungan' ? ' active' : '' ?>" href="<?= base_url('admin/kunjungan'); ?>">
               <i class="fas fa-book-medical"></i>
-              Kunjungan
+              Transaksi Medis
             </a>
           </li>
         </ul>
