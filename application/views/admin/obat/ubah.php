@@ -14,6 +14,11 @@
             <small class="muted text-danger"><?= form_error('nama'); ?></small>
           </div>
           <div class="form-group">
+            <label for="umur">Harga</label>
+            <input type="number" name="harga" id="harga" class="form-control" value="<?= $obat['harga_obat']; ?>">
+            <small class="muted text-danger"><?= form_error('harga_obat'); ?></small>
+          </div>
+          <div class="form-group">
             <button type="submit" class="btn btn-dark">Ubah</button>
           </div>
           <?= form_close(); ?> 

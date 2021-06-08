@@ -27,6 +27,7 @@
                   <td>No</td>
                   <td>ID obat</td>
                   <td>Nama obat</td>
+                  <td>Harga Obat</td>
                   <td>Aksi</td>
                 </tr>
               </thead>
@@ -36,6 +37,7 @@
                     <td><?= $no++; ?></td>
                     <td><?= $u['id_obat']; ?></td>
                     <td><?= $u['nama_obat']; ?></td>
+                    <td><?= $u['harga_obat']; ?></td>
                     <td>
                       <a href="<?= base_url('admin/obat/ubah/') . $u['id_obat']; ?>" class="btn btn-info"><i class="fas fa-edit"></i></a>
                       <a href="<?= base_url('admin/obat/hapus/') . $u['id_obat']; ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus ?')"><i class="fas fa-trash"></i></a>
@@ -67,6 +69,11 @@
           <label for="nama">Nama obat</label>
           <input type="text" name="nama" id="nama" class="form-control">
           <small class="muted text-danger"><?= form_error('nama'); ?></small>
+        </div>
+        <div class="form-group">
+          <label for="umur">Harga Obat</label>
+          <input type="number" name="harga" id="harga" class="form-control">
+          <small class="muted text-danger"><?= form_error('harga_obat'); ?></small>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

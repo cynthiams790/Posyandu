@@ -14,6 +14,7 @@ class obat extends CI_Controller {
 		$data['title'] = 'Data obat';
 		$data['obat'] = $this->obat_m->get('obat')->result_array();
 		$this->form_validation->set_rules('nama', 'Nama obat', 'required|trim');
+		$this->form_validation->set_rules('harga', 'Harga obat', 'required|trim');
 		if($this->form_validation->run() == FALSE) {
 			$this->load->view('layout/header', $data);
 			$this->load->view('layout/sidebar');
@@ -21,7 +22,8 @@ class obat extends CI_Controller {
 			$this->load->view('layout/footer');
 		} else {
 			$data = [
-				'nama_obat' => html_escape($this->input->post('nama', true))
+				'nama_obat' => html_escape($this->input->post('nama', true)),
+				'harga_obat' => html_escape($this->input->post('harga', true))
 			];
 			$this->obat_m->tambahDataobat($data);
 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data obat Berhasil Ditambahkan.</div>');
@@ -35,6 +37,7 @@ class obat extends CI_Controller {
 		$where = ['id_obat' => $id];
 		$data['obat'] = $this->obat_m->get_where('obat', $where)->row_array();
 		$this->form_validation->set_rules('nama', 'Nama petugas', 'required|trim');
+		$this->form_validation->set_rules('harga', 'Harga obat', 'required|trim');
 		if($this->form_validation->run() == FALSE) {
 			$this->load->view('layout/header', $data);
 			$this->load->view('layout/sidebar');
@@ -43,7 +46,8 @@ class obat extends CI_Controller {
 		} else {
 			$id = $this->input->post('id_obat');
 			$data = [
-				'nama_obat' => $this->input->post('nama', true)
+				'nama_obat' => $this->input->post('nama', true),
+				'harga_obat' => $this->input->post('harga', true)
 			];
 			$this->obat_m->ubahDataobat($data, $id);
 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data obat Berhasil Diubah.</div>');
