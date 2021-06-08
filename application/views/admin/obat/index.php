@@ -68,7 +68,7 @@
         </div>
         <div class="form-group">
           <label for="umur">Harga Obat</label>
-          <input type="number" name="harga" id="harga" class="form-control">
+          <input type="text" name="harga" id="harga" class="form-control">
           <small class="muted text-danger"><?= form_error('harga_obat'); ?></small>
         </div>
         <div class="modal-footer">
