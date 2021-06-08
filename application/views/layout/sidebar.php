@@ -40,7 +40,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link<?= $this->uri->segment(2) == 'bayi' ? ' active' : '' ?>" href="<?= base_url('admin/bayi'); ?>">
-              <i class="fa fa-user-injured"></i>
+              <i class="fa fa-baby"></i>
               Data Bayi
             </a>
           </li>
