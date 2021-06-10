@@ -9,7 +9,7 @@
 				<tr>
 					<th>No</th>
 					<th>Nama Bayi</th>
-					<th>Kelamin Bayi</th>
+					<th>Jenis Kelamin Bayi</th>
 					<th>Umur</th>
 				</tr>
 				<?php $no = 1; foreach($bayi as $d) : ?>

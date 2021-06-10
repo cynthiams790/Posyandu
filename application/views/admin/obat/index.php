@@ -7,7 +7,7 @@
   <div class="row mb-2">
     <div class="col-md-6">
       <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#formModalobat">
-        <i class="fas fa-plus"></i> Tambah Data obat
+        <i class="fas fa-plus"></i> Tambah Data Obat
       </button>
       <?= $this->session->flashdata('pesan'); ?>
     </div>
@@ -21,8 +21,8 @@
               <thead>
                 <tr>
                   <td>No</td>
-                  <td>ID obat</td>
-                  <td>Nama obat</td>
+                  <td>ID Obat</td>
+                  <td>Nama Obat</td>
                   <td>Harga Obat</td>
                   <td>Aksi</td>
                 </tr>
@@ -54,7 +54,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="formModalLabelpetugas">Tambah Data obat</h5>
+        <h5 class="modal-title" id="formModalLabelpetugas">Tambah Data Obat</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -62,7 +62,7 @@
       <div class="modal-body">
         <?= form_open('admin/obat'); ?>
         <div class="form-group">
-          <label for="nama">Nama obat</label>
+          <label for="nama">Nama Obat</label>
           <input type="text" name="nama" id="nama" class="form-control">
           <small class="muted text-danger"><?= form_error('nama'); ?></small>
         </div>

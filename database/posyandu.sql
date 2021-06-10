@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2021 at 02:46 PM
+-- Generation Time: Jun 10, 2021 at 03:05 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -63,7 +63,8 @@ CREATE TABLE `berobat` (
 --
 
 INSERT INTO `berobat` (`id_berobat`, `id_bayi`, `id_petugas`, `tgl_berobat`, `tindakan`, `diagnosa`) VALUES
-(4, 2, 1, '2022-05-21', 'Imunisasi Jilid 1', 'Suntik');
+(4, 2, 1, '2022-05-21', 'Imunisasi Jilid 1', 'Suntik'),
+(5, 1, 3, '2021-06-03', '', '');
 
 -- --------------------------------------------------------
 
@@ -86,6 +87,29 @@ INSERT INTO `imunisasi` (`id_imunisasi`, `nama_imunisasi`) VALUES
 (4, 'BCG'),
 (8, 'Campak'),
 (9, 'DPT-HB-HiB');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `obat`
+--
+
+CREATE TABLE `obat` (
+  `id_obat` int(11) NOT NULL,
+  `nama_obat` varchar(80) NOT NULL,
+  `harga_obat` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `obat`
+--
+
+INSERT INTO `obat` (`id_obat`, `nama_obat`, `harga_obat`) VALUES
+(2, 'Panadol Anak', 20000),
+(3, 'Sumang', 5000),
+(4, 'Sanmol', 18000),
+(5, 'Tolak Angin Anak', 4000),
+(6, 'Antimo', 2000);
 
 -- --------------------------------------------------------
 
@@ -170,6 +194,12 @@ ALTER TABLE `imunisasi`
   ADD PRIMARY KEY (`id_imunisasi`);
 
 --
+-- Indexes for table `obat`
+--
+ALTER TABLE `obat`
+  ADD PRIMARY KEY (`id_obat`);
+
+--
 -- Indexes for table `petugas`
 --
 ALTER TABLE `petugas`
@@ -197,13 +227,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bayi`
 --
 ALTER TABLE `bayi`
-  MODIFY `id_bayi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_bayi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `berobat`
 --
 ALTER TABLE `berobat`
-  MODIFY `id_berobat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_berobat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `imunisasi`
@@ -212,10 +242,16 @@ ALTER TABLE `imunisasi`
   MODIFY `id_imunisasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `obat`
+--
+ALTER TABLE `obat`
+  MODIFY `id_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `resep_imunisasi`
@@ -227,7 +263,7 @@ ALTER TABLE `resep_imunisasi`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

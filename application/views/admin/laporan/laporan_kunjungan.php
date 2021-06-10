@@ -12,8 +12,8 @@
             <td>Tanggal Kunjungan</td>
             <td>Bayi</td>
             <td>Umur</td>
-            <td>Kelamin</td>
-            <td>tindakan</td>
+            <td>Jenis Kelamin</td>
+            <td>Tindakan</td>
             <td>Diagnosa</td>
           </tr>
         </thead>

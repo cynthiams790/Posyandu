@@ -6,9 +6,9 @@
   </div>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Selamat Datang Di <strong>Posyandu Flamboyan</strong></a>
+      <center><h1 class="display-4">Selamat Datang Di <strong>Posyandu Flamboyan</strong></a>
       </h1>
-      <p class="lead">Penyakit datang karena pola hidup yang tidak sehat, maka kembalikan sakit itu dengan membenahi pola hidup yang sehat.</p>
+      <center><p class="lead">Penyakit datang karena pola hidup yang tidak sehat, maka kembalikan sakit itu dengan membenahi pola hidup yang sehat.</p>
       <center><img src="<?php echo base_url(); ?>assets/img/dashboard.jpg" class="img-thumbnail img-fluid rounded" width="600px">
     </div>
   </div>

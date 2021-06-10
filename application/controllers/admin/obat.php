@@ -11,7 +11,7 @@ class obat extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Data obat';
+		$data['title'] = 'Data Obat';
 		$data['obat'] = $this->obat_m->get('obat')->result_array();
 		$this->form_validation->set_rules('nama', 'Nama obat', 'required|trim');
 		$this->form_validation->set_rules('harga', 'Harga obat', 'required|trim');
@@ -26,14 +26,14 @@ class obat extends CI_Controller {
 				'harga_obat' => html_escape($this->input->post('harga', true))
 			];
 			$this->obat_m->tambahDataobat($data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data obat Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Obat Berhasil Ditambahkan.</div>');
 			redirect('admin/obat');
 		}
 	}
 
 	public function ubah($id)
 	{
-		$data['title'] = 'Ubah Data obat';
+		$data['title'] = 'Ubah Data Obat';
 		$where = ['id_obat' => $id];
 		$data['obat'] = $this->obat_m->get_where('obat', $where)->row_array();
 		$this->form_validation->set_rules('nama', 'Nama petugas', 'required|trim');
@@ -50,7 +50,7 @@ class obat extends CI_Controller {
 				'harga_obat' => $this->input->post('harga', true)
 			];
 			$this->obat_m->ubahDataobat($data, $id);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data obat Berhasil Diubah.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Obat Berhasil Diubah.</div>');
 			redirect('admin/obat');
 		}
 	}
@@ -58,13 +58,13 @@ class obat extends CI_Controller {
 	public function hapus($id)
 	{
 		$this->db->delete('obat', ['id_obat' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data obat Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Obat Berhasil Dihapus.</div>');
 		redirect('admin/obat');
 	}
 
 	public function laporan()
 	{
-		$data['title'] = 'Laporan obat';
+		$data['title'] = 'Laporan Obat';
 		$data['obat'] = $this->obat_m->get('obat')->result_array();
 		$this->load->view('layout/header', $data);
 		$this->load->view('admin/laporan/laporan_obat');

@@ -36,7 +36,7 @@
             <small class="muted text-danger"><?= form_error('petugas'); ?></small>
           </div>
           <div class="form-group">
-            <label for="tgl">Tanggal berobat</label>
+            <label for="tgl">Tanggal Berobat</label>
             <input type="date" name="tgl" id="tgl" class="form-control" value="<?= $kunjungan['tgl_berobat']; ?>">
             <small class="muted text-danger"><?= form_error('tgl'); ?></small>
           </div>

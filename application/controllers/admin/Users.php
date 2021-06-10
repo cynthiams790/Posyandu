@@ -11,7 +11,7 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Users';
+		$data['title'] = 'Data User';
 		$data['users'] = $this->Users_m->get('users')->result_array();
 		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'required|trim');
 		$this->form_validation->set_rules('username', 'Username', 'required|trim');

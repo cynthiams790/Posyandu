@@ -60,7 +60,7 @@ class imunisasi extends CI_Controller {
 
 	public function laporan()
 	{
-		$data['title'] = 'Laporan imunisasi';
+		$data['title'] = 'Laporan Imunisasi';
 		$data['imunisasi'] = $this->imunisasi_m->get('imunisasi')->result_array();
 		$this->load->view('layout/header', $data);
 		$this->load->view('admin/laporan/laporan_imunisasi');

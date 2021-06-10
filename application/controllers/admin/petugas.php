@@ -60,7 +60,7 @@ class petugas extends CI_Controller {
 
 	public function laporan()
 	{
-		$data['title'] = 'Laporan petugas';
+		$data['title'] = 'Laporan Petugas';
 		$data['petugas'] = $this->petugas_m->get('petugas')->result_array();
 		$this->load->view('layout/header', $data);
 		$this->load->view('admin/laporan/laporan_petugas');

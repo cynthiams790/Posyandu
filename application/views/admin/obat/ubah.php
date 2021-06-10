@@ -9,7 +9,7 @@
           <?= form_open('admin/obat/ubah/'. $obat['id_obat']); ?>
           <input type="hidden" name="id_obat" class="form-control" value="<?= $obat['id_obat']; ?>">
           <div class="form-group">
-            <label for="nama">Nama obat</label>
+            <label for="nama">Nama Obat</label>
             <input type="text" name="nama" id="nama" class="form-control" value="<?= $obat['nama_obat']; ?>">
             <small class="muted text-danger"><?= form_error('nama'); ?></small>
           </div>

@@ -11,7 +11,7 @@ class bayi extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = '	Data bayi';
+		$data['title'] = '	Data Bayi';
 		$data['bayi'] = $this->bayi_m->get('bayi')->result_array();
 		$this->form_validation->set_rules('nama', 'Nama bayi', 'required|trim');
 		$this->form_validation->set_rules('jk', 'Kelamin bayi', 'required|trim');
@@ -28,7 +28,7 @@ class bayi extends CI_Controller {
 				'umur_bayi' => html_escape($this->input->post('umur', true))
 			];
 			$this->bayi_m->tambahDatabayi($data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> bayi Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Bayi Berhasil Ditambahkan.</div>');
 			redirect('admin/bayi');
 		}
 	}
@@ -54,7 +54,7 @@ class bayi extends CI_Controller {
 				'umur_bayi' => html_escape($this->input->post('umur', true))
 			];
 			$this->bayi_m->ubahDatabayi($data, $id);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Bayi Berhasil Diubah.</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Bayi Berhasil Diubah.</div>');
 			redirect('admin/bayi');
 		}
 	}
@@ -62,13 +62,13 @@ class bayi extends CI_Controller {
 	public function hapus($id)
 	{
 		$this->db->delete('bayi', ['id_bayi' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Bayi Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Bayi Berhasil Dihapus.</div>');
 		redirect('admin/bayi');
 	}
 
 	public function laporan()
 	{
-		$data['title'] = 'Laporan bayi';
+		$data['title'] = 'Laporan Bayi';
 		$data['bayi'] = $this->bayi_m->get('bayi')->result_array();
 		$this->load->view('layout/header', $data);
 		$this->load->view('admin/laporan/laporan_bayi');
