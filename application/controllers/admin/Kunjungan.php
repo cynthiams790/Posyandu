@@ -115,7 +115,7 @@ class Kunjungan extends CI_Controller {
 		$data = [
 			'tindakan' => $tindakan,
 			'diagnosa' => $diagnosa,
-			'penatalaksaan' => $penata
+
 		];
 		$where = ['id_berobat' => $idberobat];
 		$this->Kunjungan_m->update_where('berobat', $data, $where);
