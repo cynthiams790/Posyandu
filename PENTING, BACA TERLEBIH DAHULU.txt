@@ -1,0 +1,4 @@
+SESUDAH DI EKSTRAK
+AKAN MUNCUL FOLDER "posyandu-webprogramming3"
+RENAME "posyandu-webprogramming3" MENJADI "posyandu"
+BARU MASUKAN KEDALAM HTDOCS
